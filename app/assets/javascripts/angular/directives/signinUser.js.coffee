@@ -3,6 +3,6 @@ restaurantApp.directive 'signinUser', ['$location', '$http', 'Session', ($locati
   restrict: 'E'
   replace: true
   link: (scope, element, attrs) ->
-    scope.login = (user) ->
-      Session.login(user)
+    scope.signin = (user) ->
+      Session.signin(user)
 ]

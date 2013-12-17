@@ -13,9 +13,6 @@ window.restaurantApp = angular.module('restaurantApp', [])
 # might seem somewhat awkward, but it will make more
 # sense as we add more routes to our application.
 restaurantApp.config(['$routeProvider', '$httpProvider', ($routeProvider, $httpProvider) ->
-
-#  $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
-
   $routeProvider
     .when('/home', {templateUrl: '../templates/home.html', controller: 'HomeCtrl'})
     .when('/auth', {templateUrl: '../templates/auth.html', controller: 'AuthCtrl'})
