@@ -1,0 +1,12 @@
+<form name="registrationForm" class="auth-form">
+    <div class="alert alert-warning" ng-show="authReason">
+        {{authReason}}
+    </div>
+    <div class="alert alert-error" ng-show="authError">
+        {{authError}}
+    </div>
+    <input type="text" class="input-block-level" placeholder="Email address" ng-model="user.email" required autofocus>
+    <input type="password" class="input-block-level" placeholder="Password" ng-model="user.password" required>
+    <input type="password" class="input-block-level" placeholder="Confirm Password" ng-model="user.confirm_password" required><br/>
+    <a class="btn btn-large btn-primary" type="submit" ng-click="signup(user)" ng-disabled="registrationForm.$invalid">Sign up</a>
+</form>
