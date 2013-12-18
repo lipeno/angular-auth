@@ -7,10 +7,6 @@ class SessionsController < Devise::SessionsController
            :json => current_user
   end
 
-  #def destroy
-  #  super
-  #end
-
   def destroy
     warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
     sign_out
